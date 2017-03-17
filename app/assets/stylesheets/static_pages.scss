@@ -1,3 +1,123 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  margin: 0;
+  padding: 0;
+} 
+html, body {
+  height: 100%;
+}
+h1 {
+  color : #fff;
+  text-shadow:2px 2px 2px #000 ;
+  text-align : center;
+  font-family : "Arial Black", Gadget, sans-serif;
+  font-size: 2.3em;
+  margin: 70px 0 0 0;
+}
+.navbar ul {
+  float:right;
+}
+.footer {
+  background-color: #333333;
+  color : #fff;
+  position: relative;
+  line-height:60px; 
+  height: 60px;
+  clear: both;
+}
+.contact {
+  margin: 20px;
+  padding:20px;
+}
+.btn {
+  margin-bottom: 30px;
+}
+.cover {
+  background: url('bicycles.jpg') top center no-repeat;
+  width: 100%;
+  height: 450px;
+  padding:0 20%;
+  box-shadow: inset 0 0 200px #000;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.cover-text {
+  text-align: center;
+  color: white;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 26px;
+  text-shadow:2px 2px 2px #000 ;
+  
+}
+.cover-text h2 {
+  font-size: 2em;
+  margin-top: 30%;
+  text-align: center
+}
+.banner {
+  background-color: #0b5991;
+  height: 80px;
+}
+.banner h2 {
+  text-align: center;
+  color:  #fff;
+}
+.product {
+  margin-top: 25px;
+}
+.product img {
+  margin: 25px auto;
+  border : 3px solid #919191;
+}
+.product p {
+  text-align: center;
+  font-size: 1.3em;
+  color: #5e5e5e; 
+}
+.category {
+  margin-bottom: 25px;
+}
+.category h4 {
+  background-color : #AAAEB1;
+  height: 40px;
+  margin-bottom: -1px;
+  margin-top: 25px; 
+  line-height: 40px;
+  text-align: center;
+}
+@media (max-width: 550px) {
+  
+  .cover-text h2 {
+    font-size: 1.3em;
+    margin-top: 50%;
+    margin-left: 70px;
+  }
+  .cover-text p {
+    margin-left: 70px;
+  }
+  .cover{
+    margin-top: -100px;
+    padding:0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
