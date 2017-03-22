@@ -1,0 +1,26 @@
+<article class="container">
+<p id="notice"><%= notice %></p>
+
+<h2>Products</h2>
+<hr>
+  <div class="container-fluid prod">
+    <div class="row">
+      <% @products.each do |product| %>
+        <div class="col-sm-3 col-md-4">
+          <h3><%= product.name %></h3>
+          <%= image_tag(product.image_url, class: "img-responsive") %>
+          <p><%= product.description %></p>
+          <p><%= product.colour.upcase %></p>
+          <%= link_to 'Show', product , :class => "btn btn-default" %>
+          <%= link_to 'Edit', edit_product_path(product) , :class => "btn btn-default"  %>
+          <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-default"  %>
+        </div><!-- /col -->
+      <% end %>
+    </div>
+  </div>
+
+
+<br>
+<hr>
+<%= link_to 'New Product', new_product_path , :class => "btn btn-default" %>
+</article>

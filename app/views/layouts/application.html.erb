@@ -25,9 +25,10 @@
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#index">Home</a></li>
-                <li><a href="#portofolio">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li class="active"><%= link_to 'Home', static_pages_index_path %></li>
+                <li><%= link_to 'About', static_pages_about_path %></li>
+                
+                <li><%= link_to 'Contact', static_pages_contact_path %></li>
               </ul>
               
             </div>
