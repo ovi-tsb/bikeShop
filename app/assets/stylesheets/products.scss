@@ -6,12 +6,24 @@
   color: #840000;
   text-align: center;
 }
+.one-prod {
+  border : 1px solid grey;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 10px;
+}
 .btn-default {
   margin: 0;
   font-size: 0.7em;
 }
+.show {
+  border:1px solid grey;
+  margin: 20px auto;
+  padding: 25px;
+}
 .show img {
   width: 70%;
+  margin: 10px auto;
 }
 .field input,
 .field textarea,
