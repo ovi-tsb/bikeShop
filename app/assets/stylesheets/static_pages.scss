@@ -19,6 +19,12 @@ h1 {
 .navbar ul {
   float:right;
 }
+.navbar ul li a:active {
+  color: green;
+}
+.navbar a:hover {
+  color: red;
+}
 .footer {
   background-color: #333333;
   color : #fff;
@@ -29,6 +35,21 @@ h1 {
 }
 .footer p {
   margin-top: 10px;
+}
+.about {
+  padding: 20px;
+}
+.about h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+.glyphicon {
+  margin-right: 10px;
+  display: inline-block;
+  font-size: 1.5em;
+  color: #ff8300;
+  
 }
 .contact {
   margin: 20px;
@@ -87,24 +108,68 @@ h1 {
 .category h4 {
   background-color : #AAAEB1;
   height: 40px;
+  width: 100%;
   margin-bottom: -1px;
   margin-top: 25px; 
   line-height: 40px;
   text-align: center;
 }
+@media (min-width: 550px) and (max-width: 770px) {
+  .navbar-inverse  {
+    background: transparent;
+    border: none;
+  }
+  .navbar-collapse {
+    background: transparent;
+    background-image: none;
+  }
+  .navbar-collapse ul li {
+    border-bottom: 1px solid rgba(204,204,204,0.5);
+    background: #3f3f3f;
+  }
+  .navbar-collapse ul {
+    margin-top: -1px;
+  }
+  .navbar-header {
+    background: #3f3f3f;
+  }
+  .navbar-toggle {
+    background-color: #6d6d6c;
+  }
+}
 @media (max-width: 550px) {
-  
+ 
   .cover-text h2 {
     font-size: 1.3em;
-    margin-top: 50%;
-    margin-left: 70px;
+    margin: 60% auto;
   }
   .cover-text p {
-    margin-left: 70px;
+    margin-top: -150px;
   }
   .cover{
-    margin-top: -100px;
+    margin-top: 0;
     padding:0;
+  }
+  .navbar-inverse  {
+    background: transparent;
+    border: none;
+  }
+  .navbar-collapse {
+    background: transparent;
+    background-image: none;
+  }
+  .navbar-collapse ul {
+    margin-top: -1px;
+  }
+  .navbar-collapse ul li {
+    border-bottom: 1px solid rgba(204,204,204,0.5);
+    background: #3f3f3f;
+  }
+  .navbar-header {
+    background: #3f3f3f;
+  }
+  .navbar-toggle {
+    background-color: #6d6d6c;
   }
 }
 

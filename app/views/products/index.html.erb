@@ -14,9 +14,9 @@
           <p><%= product.description %></p>
           <p><%= product.colour %></p>
           <p>$ <%= product.price %></p>
-          <%= link_to 'Show', product , :class => "btn btn-default" %>
-          <%= link_to 'Edit', edit_product_path(product) , :class => "btn btn-default"  %>
-          <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-default"  %>
+          <%= link_to 'Show', product , class: "btn btn-default" %>
+          <%= link_to 'Edit', edit_product_path(product) , class: "btn btn-default"  %>
+          <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default"  %>
           </div>
         </div><!-- /col -->
       <% end %>
@@ -26,5 +26,5 @@
 
 <br>
 <hr>
-<%= link_to 'New Product', new_product_path , :class => "btn btn-default" %>
+<%= link_to 'New Product', new_product_path , class: "btn btn-default" %>
 </article>
