@@ -1,8 +1,11 @@
 class StaticPagesController < ApplicationController
   def index
+    @products = Product.last(4)
   end
 
   def landing_page
-      @featured_product = Product.first
+      
+      @products = Product.last(4)
+
   end
 end

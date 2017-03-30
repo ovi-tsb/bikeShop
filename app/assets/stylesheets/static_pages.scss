@@ -114,6 +114,33 @@ h1 {
   line-height: 40px;
   text-align: center;
 }
+.carousel-caption {
+  margin-bottom: 40%;
+  position: absolute;
+  color: black;
+  font-size: 1.4em;
+}
+.carousel-inner img {
+  margin-bottom: 150px;
+  margin: 0 auto;
+  width: 50%;
+}
+.carousel-indicators li {
+    display: inline-block;
+    margin: 10px;
+    text-indent: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    border:1px solid #6b6b6b;
+}
+.carousel-indicators .active {
+    margin: 10px;
+    background-color: #fcb53a;
+}
+.carousel-control:hover {
+  background: none;
+}
 @media (min-width: 550px) and (max-width: 770px) {
   .navbar-inverse  {
     background: transparent;
@@ -135,6 +162,11 @@ h1 {
   }
   .navbar-toggle {
     background-color: #6d6d6c;
+  }
+  .carousel-caption {
+    margin-bottom: 36%;
+    position: absolute;
+    
   }
 }
 @media (max-width: 550px) {
@@ -170,6 +202,12 @@ h1 {
   }
   .navbar-toggle {
     background-color: #6d6d6c;
+  }
+
+  .carousel-caption {
+    margin-bottom: 33%;
+    position: absolute;
+    
   }
 }
 
