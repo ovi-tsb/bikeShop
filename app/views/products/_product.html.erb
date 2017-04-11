@@ -1,14 +1,25 @@
-
 <div class="col-sm-4 col-md-4">
   <div class="one-prod">
-    <h3><%= product.name %></h3>
+    <h3>
+      <%= product.name %>
+    </h3>
     <hr>
     <%= image_tag(product.image_url, class: "img-responsive") unless product.image_url.blank? %>
-    <p><%= product.description %></p>
-    <p>Id: #<%= product.id %></p>
-    <p>Color : <%= product.colour %></p>
-    <p><%= product.created_at %></p>
-    <p>$ <%= product.price %></p>
+    <p>
+      <%= product.description %>
+    </p>
+    <p>
+      Id: #<%= product.id %>
+    </p>
+    <p>
+      Color : <%= product.colour %>
+    </p>
+    <p>
+      <%= product.created_at %>
+    </p>
+    <p>
+      $ <%= product.price %>
+    </p>
     <%= link_to 'Show', product , class: "btn btn-default" %>
     <%= link_to 'Edit', edit_product_path(product) , class: "btn btn-default"  %>
     <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default"  %>

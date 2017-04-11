@@ -4,8 +4,6 @@ class StaticPagesController < ApplicationController
   end
 
   def landing_page
-      
-      @products = Product.last(4)
-
+    @products = Product.last(4)
   end
 end
