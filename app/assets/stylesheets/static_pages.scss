@@ -16,15 +16,6 @@ h1 {
   font-size: 2.3em;
   margin: 70px 0 0 0;
 }
-.navbar ul {
-  float:right;
-}
-.navbar ul li a:active {
-  color: green;
-}
-.navbar a:hover {
-  color: red;
-}
 .footer {
   background-color: #333333;
   color : #fff;
@@ -49,14 +40,28 @@ h1 {
   display: inline-block;
   font-size: 1.5em;
   color: #ff8300;
-  
 }
 .contact {
   margin: 20px;
   padding:20px;
 }
+ .navbar ul {
+  float:right;
+}
+.navbar ul li a:active {
+  color: green;
+}
+.navbar a:hover {
+  color: red;
+}
 .btn {
   margin-bottom: 30px;
+}
+.navbar-form > .btn {
+  margin-bottom: 0;
+}
+.navbar-form {
+  margin-top: 10px;
 }
 .cover {
   background: url('bicycles.jpg') top center no-repeat;
@@ -166,11 +171,9 @@ h1 {
   .carousel-caption {
     margin-bottom: 36%;
     position: absolute;
-    
   }
 }
 @media (max-width: 550px) {
- 
   .cover-text h2 {
     font-size: 1.3em;
     margin: 60% auto;
@@ -203,26 +206,9 @@ h1 {
   .navbar-toggle {
     background-color: #6d6d6c;
   }
-
   .carousel-caption {
     margin-bottom: 33%;
     position: absolute;
-    
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
