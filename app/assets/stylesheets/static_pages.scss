@@ -57,6 +57,26 @@ h1 {
 .btn {
   margin-bottom: 30px;
 }
+.modal {
+
+}
+.modal-content {
+  background: #d8d8d8;
+  padding: 20px;
+  
+}
+.modal-content input {
+  margin: 10px auto;
+  width: 100%;
+}
+.login {
+  margin-bottom: 0;
+  color: #bababa;
+  margin-top: 2%;
+}
+.login:hover {
+  color: #fff;
+}
 .navbar-form > .btn {
   margin-bottom: 0;
 }

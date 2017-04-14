@@ -37,7 +37,11 @@
                 <li class=<%= active_class(static_pages_index_path) %>><%= link_to 'Home', static_pages_index_path %></li>
                 <li class=<%= active_class(static_pages_about_path) %>><%= link_to 'About', static_pages_about_path %></li>
                 <li class=<%= active_class(products_path) %>><%= link_to 'Products', products_path %></li>
-                <li class=<%= active_class(static_pages_contact_path) %>><%= link_to 'Contact', static_pages_contact_path %></li>
+                <li class=<%= active_class(static_pages_contact_path) %>><%= link_to 'Contact', static_pages_contact_path %>
+                </li>
+                <li class="btn login" data-toggle="modal" data-target=".bs-example-modal-sm">
+                  Login
+                </li>
               </ul>
             </div>
           </div>
@@ -49,6 +53,33 @@
               </div>
         </div>
         <article>
+
+        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Login</h4>
+              </div>
+              <div class="modal-body">
+                <%= form_for :person do |f| %>
+                  <div class="field">
+                    User name: <%= f.text_field :first_name %>
+                  </div>
+                  <div class="field">
+                    Password : <%= password_field(:login, :pass, size: 20) %>
+                  </div>
+                  
+                  <%= f.submit "Submit", class: "btn btn-default"%>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+          <!--  modal  -->
+        
           <%= yield %>
         </article>
         <footer class="footer">
