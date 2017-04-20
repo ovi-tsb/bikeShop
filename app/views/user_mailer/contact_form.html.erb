@@ -1,12 +1,34 @@
 <article class="container">
 
-<table>
+<table class="mail" align="center" border="1" cellpadding="0" cellspacing="0" width="350" style="border-collapse: collapse;">
   <tbody>
     <tr>
-      <td><p>You have received a new contact form message. The contents of the message are:</p></td>
+      <td width="300">
+        <%= image_tag("split.jpg", class: "img-responsive", :alt => "Bike Shop Email") %>
+      </td>
     </tr>
     <tr>
-      <td><p><%= @message %></p></td>
+      <td style="padding: 20px 30px 40px 30px;">
+        <table border="0" cellpadding="0" cellspacing="0" >
+          <tr>
+           <td>
+            <p>You have received a new contact form message. The contents of the message are:</p>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <p><%= @message %></p>
+           </td>
+          </tr>
+          
+         </table>
+        
+      </td>
+    </tr>
+    <tr>
+      <td bgcolor="#565656" style="padding: 30px 30px 30px 30px;">
+        <p style = "color: #fff;">Bike Shop 2017</p>
+      </td>
     </tr>
   </tbody>
 </table>
