@@ -57,9 +57,21 @@ h1 {
 .btn {
   margin-bottom: 30px;
 }
-.modal {
-
+//////   modal search ///////
+#modalSearch {
+  padding: 30px;
+  border: 0;
 }
+#modalSearch a {
+  text-decoration: none;
+}
+:focus {outline:0 !important;} ///// blue border removed //////
+.glyphicon-search  {
+  color: #fff;
+  margin: 0;
+  font-size: 1em;
+}
+///////  modal login ///////
 .modal-content {
   background: #d8d8d8;
   padding: 20px;
@@ -77,11 +89,12 @@ h1 {
 .login:hover {
   color: #fff;
 }
-.navbar-form > .btn {
-  margin-bottom: 0;
-}
 .navbar-form {
-  margin-top: 10px;
+  line-height: 24px;
+}
+.navbar-form input {
+  margin-bottom: 0px;
+  margin-top: 3px;
 }
 .cover {
   background: url('bicycles.jpg') top center no-repeat;
@@ -166,6 +179,12 @@ h1 {
 .carousel-control:hover {
   background: none;
 }
+.thank_you {
+  color: green;
+  margin-top: 20px;
+  min-height: 350px;
+}
+
 @media (min-width: 550px) and (max-width: 770px) {
   .navbar-inverse  {
     background: transparent;
@@ -192,6 +211,11 @@ h1 {
     margin-bottom: 36%;
     position: absolute;
   }
+  .login {
+  border-radius : 0;
+  margin-top: 0px;
+  text-align: left;
+}
 }
 @media (max-width: 550px) {
   .cover-text h2 {
@@ -230,8 +254,35 @@ h1 {
     margin-bottom: 33%;
     position: absolute;
   }
+  .navbar-form {
+    line-height: 24px;
+    display: inline-block;
+  }
+  .navbar-form input {
+    margin-bottom: 0px;
+    margin-top: 3px;
+  }
+  .navbar-form {
+    margin-left: 12%;
+  }
+  .login {
+  border-radius : 0;
+  margin-top: 0px;
+  text-align: left;
+}
   table {
     width: 100%!important;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
 

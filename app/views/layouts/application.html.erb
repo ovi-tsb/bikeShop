@@ -24,17 +24,9 @@
               <a href="#index" class="navbar-brand">Bike Shop</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
-            <form class="navbar-form navbar-right" role="search">
-              <div class="form-group">
-                <%= form_tag("/products", method: "get", class: 'input-group search') do %>
-                <!--<%= label_tag(:q, "Search for:") %>-->
-                <%= text_field_tag(:q ,nil , placeholder:"Search")%>
-              </div>
-                <%= submit_tag("Search", class: "btn btn-default") %>
-              <% end %>
-            </form>
-           <ul class="nav navbar-nav navbar-right">
-                <li class=<%= active_class(static_pages_index_path) %>><%= link_to 'Home', static_pages_index_path %></li>
+            
+              <ul class="nav navbar-nav navbar-right">
+                <li class=<%= active_class(static_pages_index_path) %>><%= link_to 'Home', root_path %></li>
                 <li class=<%= active_class(static_pages_about_path) %>><%= link_to 'About', static_pages_about_path %></li>
                 <li class=<%= active_class(products_path) %>><%= link_to 'Products', products_path %></li>
                 <li class=<%= active_class(static_pages_contact_path) %>><%= link_to 'Contact', static_pages_contact_path %>
@@ -42,7 +34,13 @@
                 <li class="btn login" data-toggle="modal" data-target=".bs-example-modal-sm">
                   Login
                 </li>
+                <li>
+                  <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch">
+                    <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
+                  </a>
+                </li>
               </ul>
+              
             </div>
           </div>
         </nav>
@@ -79,7 +77,32 @@
           </div>
         </div>
           <!--  modal  -->
-        
+        <!-- Search Modal -->
+        <div id="modalSearch" class="modal fade" role="dialog">
+           <div class="modal-dialog">
+
+               <!-- Modal content-->
+               <div class="modal-content">
+                   <div class="modal-header">
+                       <button type="button" class="close" data-dismiss="modal">&times;</button>
+                       <h4 class="modal-title">Search</h4>
+                   </div>
+                   <div class="modal-body">
+                       <!-- Add the modal body here -->
+                       <form class="navbar-form" role="search">
+                        
+                           <%= form_tag("/products", method: "get", class: 'input-group') do %>
+                           <!--<%= label_tag(:q, "Search for:") %>-->
+                           <%= text_field_tag(:q ,nil , placeholder:"  Search .. ")%>
+                           <%= submit_tag("Search", class: "btn btn-default") %>
+                         <% end %>
+                       </form>
+                   </div>
+                   
+               </div>
+
+           </div>
+        </div>
           <%= yield %>
         </article>
         <footer class="footer">
