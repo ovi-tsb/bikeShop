@@ -100,6 +100,7 @@ h1 {
   background: url('bicycles.jpg') top center no-repeat;
   width: 100%;
   height: 450px;
+  margin-top: -11px;
   padding:0 20%;
   box-shadow: inset 0 0 200px #000;
   -webkit-background-size: cover;
@@ -184,6 +185,20 @@ h1 {
   margin-top: 20px;
   min-height: 350px;
 }
+.user-style {
+  padding:40px;
+  width: 500px;
+}
+.user-style i {
+ color: #3097ff;
+}
+.user-style .field input{
+  width: 100%;
+}
+
+
+
+
 
 @media (min-width: 550px) and (max-width: 770px) {
   .navbar-inverse  {

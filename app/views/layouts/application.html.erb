@@ -24,15 +24,18 @@
               <a href="#index" class="navbar-brand">Bike Shop</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
-            
               <ul class="nav navbar-nav navbar-right">
                 <li class=<%= active_class(root_path) %>><%= link_to 'Home', root_path %></li>
                 <li class=<%= active_class(static_pages_about_path) %>><%= link_to 'About', static_pages_about_path %></li>
                 <li class=<%= active_class(products_path) %>><%= link_to 'Products', products_path %></li>
                 <li class=<%= active_class(static_pages_contact_path) %>><%= link_to 'Contact', static_pages_contact_path %>
                 </li>
-                <li class="btn login" data-toggle="modal" data-target=".bs-example-modal-sm">
-                  Login
+                <li>
+                <% if user_signed_in? %>
+                  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+                <% else %>
+                  <%= link_to('Login', new_user_session_path) %>
+                <% end %>
                 </li>
                 <li>
                   <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch">
@@ -44,6 +47,10 @@
             </div>
           </div>
         </nav>
+
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+
         <div class="cover">
               <div class="cover-text">
                 <h2>Welcome to Bike Shop </h2>
@@ -51,31 +58,7 @@
               </div>
         </div>
         <article>
-<!-- Login modals -->
-        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-                <h4 class="modal-title" id="myModalLabel">Login</h4>
-              </div>
-              <div class="modal-body">
-                <%= form_for :person do |f| %>
-                  <div class="field">
-                    User name: <%= f.text_field :first_name %>
-                  </div>
-                  <div class="field">
-                    Password : <%= password_field(:login, :pass, size: 20) %>
-                  </div>
-                  
-                  <%= f.submit "Submit", class: "btn btn-default"%>
-                <% end %>
-              </div>
-            </div>
-          </div>
-        </div>
+
           <!--  modal  -->
         <!-- Search Modal -->
         <div id="modalSearch" class="modal fade" role="dialog">

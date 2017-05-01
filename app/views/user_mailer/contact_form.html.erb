@@ -12,12 +12,16 @@
   <tbody>
     <tr>
       <td>
-        <%= image_tag("split.jpg", class: "img-responsive", :alt => "Bike Shop Email") %>
-        <img src="split.jpg" alt="Creating Email Magic" width="300" height="230" style="display: block;" />
+        <h2 style="margin: 0 auto; text-align: center;">Bike Shop</h2>
       </td>
     </tr>
     <tr>
-      <td style="padding: 20px 30px 40px 30px;">
+      <td>
+        <%= image_tag("split.jpg", :alt => "Bike Shop Email", :width => "350", :style => "display: block;") %>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 20px;">
         <table border="0" cellpadding="0" cellspacing="0" >
           <tr>
            <td>
@@ -25,7 +29,7 @@
            </td>
           </tr>
           <tr>
-           <td>
+           <td style="border: 1px solid #dbdbdb; padding: 10px;">
             <p><%= @message %></p>
            </td>
           </tr>
@@ -35,7 +39,7 @@
       </td>
     </tr>
     <tr>
-      <td bgcolor="#565656" style="padding: 30px 30px 30px 30px;">
+      <td bgcolor="#565656" style="padding: 10px 30px 10px 30px;">
         <p style = "color: #fff;">Bike Shop 2017</p>
       </td>
     </tr>
