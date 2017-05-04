@@ -195,7 +195,14 @@ h1 {
 .user-style .field input{
   width: 100%;
 }
-
+.user-login {
+  color: #71d2d6;
+  margin-top: 0px;
+}
+.alert-info{
+  color: #000;
+  margin-top: 60px;
+}
 
 
 
@@ -227,9 +234,9 @@ h1 {
     position: absolute;
   }
   .login {
-  border-radius : 0;
-  margin-top: 0px;
-  text-align: left;
+    border-radius : 0;
+    margin-top: 0px;
+    text-align: left;
 }
 }
 @media (max-width: 550px) {
@@ -241,7 +248,7 @@ h1 {
     margin-top: -150px;
   }
   .cover{
-    margin-top: 0;
+    margin-top: -20px;
     padding:0;
   }
   .navbar-inverse  {
@@ -281,10 +288,16 @@ h1 {
     margin-left: 12%;
   }
   .login {
-  border-radius : 0;
-  margin-top: 0px;
-  text-align: left;
-}
+    border-radius : 0;
+    margin-top: 0px;
+    text-align: left;
+  }
+  .user-login {
+    height: 40px;
+    line-height: 40px;
+    margin-top: 0;
+    padding: 0 5px;
+  }
   table {
     width: 100%!important;
   }
