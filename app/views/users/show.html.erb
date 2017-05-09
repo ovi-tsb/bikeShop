@@ -1,4 +1,5 @@
-<article class="container">
+<article class="container user-style">
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -7,9 +8,20 @@
 </p>
 
 <p>
+  <strong>Name:</strong>
+  <%= @user.first_name %>
+</p>
+
+<p>
+  <strong>Last Name:</strong>
+  <%= @user.last_name %>
+</p>
+
+<p>
   <strong>User Id:</strong>
   <%= @user.id %>
 </p>
+<br><br>
 
 <%= link_to 'Edit', edit_user_path(@user) , class: "btn btn-default"%> 
 <%= link_to 'Back', users_path , class: "btn btn-default"%>
