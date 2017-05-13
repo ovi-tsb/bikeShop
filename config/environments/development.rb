@@ -30,9 +30,7 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = false
 
   config.action_mailer.perform_caching = false
-
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-  # Print deprecation notices to the Rails logger.
+ # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
   # Raise an error on page load if there are pending migrations.
@@ -46,6 +44,7 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
+  
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
@@ -53,4 +52,6 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+ 
 end
