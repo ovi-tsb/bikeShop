@@ -1,7 +1,13 @@
 <article class="container">
   <div class="show"> 
     <p id="notice"><%= notice %></p>
-
+    <div class="row">
+    <div class="col-sm-9 col-md-9">
+    <p>
+      <%= image_tag(@product.image_url, class: "img-responsive") %>
+    </p>
+    </div>
+    <div class="col-sm-3 col-md-3">
     <p>
       <strong>Name:</strong>
       <%= @product.name %>
@@ -12,9 +18,7 @@
       <%= @product.description %>
     </p>
     
-    <p>
-      <%= image_tag(@product.image_url, class: "img-responsive") %>
-    </p>
+    
     <p>
       <strong>Colour:</strong>
       <%= @product.colour %>
@@ -23,8 +27,16 @@
       <strong>Price:</strong>
       <%= @product.price %>
     </p>
+    <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+    
+    </div>
+    </div>
+    <hr>
+    <%= render partial: "new_comment" %>
 
-    <%= @product.highest_rating_comment %>
+    <%= render partial: "comments" %>
+    
+    <br>
 
     <%= link_to 'Edit', edit_product_path(@product) , class: "btn btn-default" %>
     <%= link_to 'Back', products_path, class: "btn btn-default" %>

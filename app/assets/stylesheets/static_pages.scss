@@ -237,7 +237,13 @@ h1 {
     border-radius : 0;
     margin-top: 0px;
     text-align: left;
-}
+  }
+  .rated img {
+    width: 4%;
+  }
+  .rating img{
+    width: 4%;
+  }
 }
 @media (max-width: 550px) {
   .cover-text h2 {
@@ -300,6 +306,12 @@ h1 {
   }
   table {
     width: 100%!important;
+  }
+  .rated img {
+    width: 4%;
+  }
+  .rating img{
+    width: 4%;
   }
 }
 
