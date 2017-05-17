@@ -36,6 +36,7 @@
     <h4>Latest customers reviews :</h4>
     <%= render partial: "comments" %>
     
+    <%= will_paginate @comments %>
     <br>
 
     <%= link_to 'Edit', edit_product_path(@product) , class: "btn btn-default" %>

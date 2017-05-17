@@ -45,6 +45,30 @@
 .rated-list img {
   width: 2.5%;
 }
+.pagination {
+    font-size: 12px;
+}
+// will paginate
+.pagination > * {
+    margin-right: 0.1em;
+    padding: 0.3em 0.4em;
+    border: 1px solid #047dc9;
+}
+.pagination a:hover {
+    background: #047dc9 none repeat scroll 0 0;
+    text-shadow: 1px 1px 1px #171717;
+}
+.pagination a:active {
+    text-shadow: none;
+}
+.pagination .current {
+    background: #047dc9 none repeat scroll 0 0;
+    color: white;
+    text-shadow: 1px 1px 1px #171717}
+.pagination .disabled {
+    color: #C0C0C0;
+}
+//will paginate
 
 
 
