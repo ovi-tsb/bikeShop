@@ -74,6 +74,9 @@ h1 {
   margin: 0;
   font-size: 1em;
 }
+.glyphicon-search:hover {
+  color: #7a7a7a;
+}
 ///////  modal login ///////
 .modal-content {
   background: #d8d8d8;
@@ -201,12 +204,18 @@ h1 {
 .user-login {
   color: #71d2d6;
   margin-top: 0px;
+
 }
 .alert-info{
   color: #000;
   margin-top: 60px;
 }
-
+.capitalize-name {
+  text-transform: capitalize;
+}
+.description {
+  border-left:1px solid grey;
+}
 
 
 
@@ -247,14 +256,18 @@ h1 {
   .rating img{
     width: 4%;
   }
+  .description {
+    border-top:1px solid grey;
+    border-left: none;
+  }
 }
 @media (max-width: 550px) {
   .cover-text h2 {
-    font-size: 1.3em;
-    margin: 60% auto;
+    font-size: 1.4em;
+    margin: 40% auto;
   }
   .cover-text p {
-    margin-top: -150px;
+    margin-top: -120px;
   }
   .cover{
     margin-top: -20px;
@@ -263,6 +276,9 @@ h1 {
   .navbar-inverse  {
     background: transparent;
     border: none;
+  }
+  .navbar-nav {
+    height: auto;
   }
   .navbar-collapse {
     background: transparent;
@@ -301,12 +317,6 @@ h1 {
     margin-top: 0px;
     text-align: left;
   }
-  .user-login {
-    height: 40px;
-    line-height: 40px;
-    margin-top: 0;
-    padding: 0 5px;
-  }
   table {
     width: 100%!important;
   }
@@ -315,6 +325,10 @@ h1 {
   }
   .rating img{
     width: 4%;
+  }
+  .description {
+    border-top:1px solid grey;
+    border-left: none;
   }
 }
 
