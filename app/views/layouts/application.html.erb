@@ -96,14 +96,11 @@
                    </div>
                    <div class="modal-body">
                        <!-- Add the modal body here -->
-                       <form class="navbar-form" role="search">
-                        
                            <%= form_tag("/products", method: "get", class: 'input-group') do %>
                            <!--<%= label_tag(:q, "Search for:") %>-->
                            <%= text_field_tag(:q ,"" , placeholder: "  Search .. ")%>
                            <%= submit_tag("Search", class: "btn btn-default") %>
                          <% end %>
-                       </form>
                    </div>
                    
                </div>
