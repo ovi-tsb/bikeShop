@@ -4,8 +4,7 @@
   <%= flash[:notice] %>
 
   <%= form_tag("/static_pages/thank_you") do %>
-  <div class="row">
-    <div class="col-md-4">
+  
       <div class="form-group">
         <%= label_tag :name %>
         <%= text_field_tag :name, nil, :required => true, class: "form-control", placeholder: "Enter Name" %>
@@ -18,8 +17,7 @@
         <%= label_tag :message %>
         <%= text_area_tag :message, nil, :required => true, class: "form-control", placeholder: "Enter Message" %>
       </div>      
-    </div>
-  </div>
+    
   <%= submit_tag "Send", class: "btn btn-default" %>   
   <% end %>
 </div>
