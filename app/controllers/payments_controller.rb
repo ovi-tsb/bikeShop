@@ -1,4 +1,5 @@
 class PaymentsController < ApplicationController
+  before_action :authenticate_user!
   def create
     @product = Product.find(params[:product_id])
     @user = current_user
@@ -14,8 +15,9 @@ class PaymentsController < ApplicationController
         )
 
         if charge.paid
-          Order.create(product_id: @product.id,user_id: @user.id, total: @product.price ) 
-          flash[:notice] = "Your payment was processed successfully" 
+          Order.create(product_id: @product.id, user_id: @user.id, total: @product.price ) 
+          #UserMailer.payment_confirmation(@user, @product).deliver_now
+          redirect_to product_path(@product), notice: "Payment was processed successfully"
         end
 
       rescue Stripe::CardError => e
@@ -24,6 +26,6 @@ class PaymentsController < ApplicationController
         err = body[:error]
         flash[:error] = "Unfortunately, there was an error processing your payment: #{err[:message]}"
       end
-      redirect_to product_path(@product)
+      #redirect_to product_path(@product)
   end
 end
