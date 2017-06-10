@@ -1,7 +1,7 @@
 class UserMailer < ApplicationMailer
-  include Devise::Mailers::Helpers
-  default from: 'ovi_tsb@hotmail.com'
   
+  default from: 'ovi_tsb@hotmail.com'
+
   def contact_form(email, name, message)
   @message = message
     mail(:from => email,
@@ -18,8 +18,12 @@ class UserMailer < ApplicationMailer
   def payment_confirmation(user, product)
       @user = user
       @product = product
-      mail( :to => user.email,
-            :subject => "Payment confirmation")
+      
+      mail( :to => user.email, 
+            :subject => "Payment confirmation of payment #{product.name}")
+
   end
+
+
 
 end
