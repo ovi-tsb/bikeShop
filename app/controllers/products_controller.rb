@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
+  #logger.debug
   # GET /products
   # GET /products.json
   def index
@@ -26,7 +26,7 @@ class ProductsController < ApplicationController
   # GET /products/1/edit
   def edit
   end
-
+  #byebug
   # POST /products
   # POST /products.json
   def create
