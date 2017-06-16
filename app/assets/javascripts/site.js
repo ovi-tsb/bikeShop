@@ -6,4 +6,14 @@ $(document).on('turbolinks:load', function(){
             return $(this).attr('data-score');
           }
         });
+
+    //Image Constrain
+    $(".img-zoom").elevateZoom({ zoomType: "lens", containLensZoom: true});
+   
+    //Inner Zoom
+    //$(".img-zoom").elevateZoom({
+     //         zoomType : "inner",
+      //      cursor: "crosshair"
+     // });
+    //$(".img-zoom").elevateZoom({tint:true, tintColour:'#F90', tintOpacity:0.5});// if you want some bg effects
 });
