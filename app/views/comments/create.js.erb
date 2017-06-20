@@ -1,0 +1,7 @@
+
+
+  //$("#new_comment").hide();
+  $("#new_comment").html("<span style='color:green'><h4>Thank you for your review!</h4></span>");
+  $('.product-reviews').prepend("<%= j render @comment %>");
+  $("#average-rating").attr('data-score', "<%= @product.average_rating %>");
+  refreshRating();

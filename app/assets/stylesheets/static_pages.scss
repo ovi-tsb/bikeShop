@@ -219,7 +219,10 @@ h1 {
 .description {
   border-left:1px solid grey;
 }
-
+.comment-body p::first-letter{
+  text-transform:capitalize;
+  
+}
 
 @media (min-width: 550px) and (max-width: 770px) {
   .navbar-inverse  {
