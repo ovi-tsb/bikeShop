@@ -8,24 +8,26 @@
     
     </div>
     <div class="col-sm-3 col-md-3 description">
-    <p>
-      <strong>Name:</strong>
-      <%= @product.name %>
-    </p>
-    
-    <p>
-     <strong>Description:</strong>
-      <%= @product.description %>
-    </p>
-    
-    <p>
-      <strong>Colour:</strong>
-      <%= @product.colour %>
-    </p>
-    <p>
-      <strong>Price:</strong>
-      <%= @product.price %>
-    </p>
+      <% cache @product do %>  
+        <p>
+          <strong>Name:</strong>
+          <%= @product.name %>
+        </p>
+        
+        <p>
+         <strong>Description:</strong>
+          <%= @product.description %>
+        </p>
+        
+        <p>
+          <strong>Colour:</strong>
+          <%= @product.colour %>
+        </p>
+        <p>
+          <strong>Price:</strong>
+          <%= @product.price %>
+        </p>
+      <% end %>
     <p>Average Rating: <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div> 
     </p>
     <%= form_tag "/payments/create" do %>

@@ -38,6 +38,7 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'rails-controller-testing'
 gem 'stripe'
 gem "brakeman", :require => false
+gem 'dalli'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
