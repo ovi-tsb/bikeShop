@@ -39,6 +39,8 @@ gem 'rails-controller-testing'
 gem 'stripe'
 gem "brakeman", :require => false
 gem 'dalli'
+gem 'gmaps4rails'
+gem 'geocoder'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

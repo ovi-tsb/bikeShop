@@ -12,5 +12,7 @@
   </div>
   
   <hr>
-  <%= link_to 'New Product', new_product_path , class: "btn btn-default" %>
+  <% if current_user && current_user.admin? %>
+    <%= link_to 'New Product', new_product_path , class: "btn btn-default" %>
+  <%end%> 
 </article>

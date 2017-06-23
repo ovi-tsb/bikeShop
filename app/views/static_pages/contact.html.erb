@@ -1,23 +1,57 @@
-<div class="contact">
-  <h2>Contact Us</h2>
+<div class="container contact">
+  <div class="row">
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <h2>Contact Us</h2>
 
-  <%= flash[:notice] %>
+      <%= flash[:notice] %>
 
-  <%= form_tag("/static_pages/thank_you") do %>
+      <%= form_tag("/static_pages/thank_you") do %>
+      
+          <div class="form-group">
+            <%= label_tag :name %>
+            <%= text_field_tag :name, nil, :required => true, class: "form-control", placeholder: "Enter Name" %>
+          </div>      
+          <div class="form-group">
+            <%= label_tag :email, "Email Address" %>
+            <%= text_field_tag :email, nil, :required => true, class: "form-control", placeholder: "Enter Email" %>
+          </div>
+          <div class="form-group">
+            <%= label_tag :message %>
+            <%= text_area_tag :message, nil, :required => true, class: "form-control", placeholder: "Enter Message" %>
+          </div>      
+
+      <%= submit_tag "Send", class: "btn btn-default" %>   
+      <% end %>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
   
-      <div class="form-group">
-        <%= label_tag :name %>
-        <%= text_field_tag :name, nil, :required => true, class: "form-control", placeholder: "Enter Name" %>
-      </div>      
-      <div class="form-group">
-        <%= label_tag :email, "Email Address" %>
-        <%= text_field_tag :email, nil, :required => true, class: "form-control", placeholder: "Enter Email" %>
-      </div>
-      <div class="form-group">
-        <%= label_tag :message %>
-        <%= text_area_tag :message, nil, :required => true, class: "form-control", placeholder: "Enter Message" %>
-      </div>      
-    
-  <%= submit_tag "Send", class: "btn btn-default" %>   
-  <% end %>
+      <div id="map" style='height: 300px;'></div>
+  
+      <script>
+        handler = Gmaps.build('Google');
+        handler.buildMap({
+            provider: {
+              disableDefaultUI: true
+              // pass in other Google Maps API options here
+            },
+            internal: {
+              id: 'map'
+            }
+          },
+          function(){
+            markers = handler.addMarkers([
+              {
+                "lat": 43.5727068,
+                "lng": -79.6027248,
+                "infowindow": "Bike Shop!"
+              }
+            ]);
+            handler.bounds.extendWith(markers);
+            handler.fitMapToBounds();
+            handler.getMap().setZoom(10);
+          }
+        );
+      </script>
+    </div>
+  </div> 
 </div>

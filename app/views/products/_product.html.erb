@@ -25,10 +25,12 @@
         $ <%= product.price %>
       </p>
       <%end%>
+
       <%= link_to 'Show', product , class: "btn btn-default" %>
-      <%= link_to 'Edit', edit_product_path(product) , class: "btn btn-default"  %>
-      <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default"  %>
-    
+      <% if current_user && current_user.admin? %>
+        <%= link_to 'Edit', edit_product_path(product) , class: "btn btn-default"  %>
+        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default"  %>
+      <%end%>
   </div>
     
 </div><!-- /col -->

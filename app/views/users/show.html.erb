@@ -27,6 +27,8 @@
 </p>
 <br><br>
 
-<%= link_to 'Edit', edit_user_path(@user) , class: "btn btn-default"%> 
-<%= link_to 'Back', users_path , class: "btn btn-default"%>
+<%= link_to 'Edit', edit_user_path(@user) , class: "btn btn-default"%>
+<% if current_user && current_user.admin? %>
+  <%= link_to 'Back', users_path , class: "btn btn-default"%>
+<%end%>
 </article>

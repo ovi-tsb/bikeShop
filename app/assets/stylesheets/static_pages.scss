@@ -45,9 +45,11 @@ h1 {
   color: red;
 }
 .contact {
-  margin: 20px auto;
-  width: 450px;
-  padding:20px;
+  margin: 40px auto;
+}
+#map {
+  border: 2px solid grey;
+  margin-top: 30px;
 }
  .navbar ul {
   float:right;
@@ -172,17 +174,17 @@ h1 {
   width: 50%;
 }
 .carousel-indicators li {
-    display: inline-block;
-    margin: 10px;
-    text-indent: 0;
-    cursor: pointer;
-    border: none;
-    border-radius: 50%;
-    border:1px solid #6b6b6b;
+  display: inline-block;
+  margin: 10px;
+  text-indent: 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  border:1px solid #6b6b6b;
 }
 .carousel-indicators .active {
-    margin: 10px;
-    background-color: #fcb53a;
+  margin: 10px;
+  background-color: #fcb53a;
 }
 .carousel-control:hover {
   background: none;
@@ -207,7 +209,6 @@ h1 {
 .user-login {
   color: #71d2d6;
   margin-top: 0px;
-
 }
 .alert-info{
   color: #000;
@@ -221,7 +222,6 @@ h1 {
 }
 .comment-body p::first-letter{
   text-transform:capitalize;
-  
 }
 
 @media (min-width: 550px) and (max-width: 770px) {
@@ -278,6 +278,9 @@ h1 {
   .cover{
     margin-top: -20px;
     padding:0;
+  }
+  .about h2 {
+    font-size: 1.4em;
   }
   .navbar-inverse  {
     background: transparent;
@@ -336,8 +339,6 @@ h1 {
     border-top:1px solid grey;
     border-left: none;
   }
-  
-
 }
 
 
