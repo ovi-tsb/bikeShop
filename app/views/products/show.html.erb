@@ -3,7 +3,7 @@
     <p id="notice"><%= notice %></p>
     <div class="row">
     <div class="col-sm-9 col-md-9">
-    
+      <%= link_to 'Back to products', products_path, class: "btn btn-default" %>
       <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: @product.image_url) %>
     
     </div>
@@ -46,6 +46,6 @@
     <% if current_user && current_user.admin? %>
       <%= link_to 'Edit', edit_product_path(@product) , class: "btn btn-default" %>
     <% end %>  
-    <%= link_to 'Back', products_path, class: "btn btn-default" %>
+    <%= link_to 'Back to products', products_path, class: "btn btn-default" %>
   </div>   
 </article>

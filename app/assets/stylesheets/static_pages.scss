@@ -280,7 +280,13 @@ h1 {
     padding:0;
   }
   .about h2 {
-    font-size: 1.4em;
+    font-size: 1.3em;
+  }
+  .glyphicon {
+    font-size: 1.3em;
+  }
+  .category {
+    
   }
   .navbar-inverse  {
     background: transparent;
@@ -298,16 +304,22 @@ h1 {
   }
   .navbar-collapse ul li {
     border-bottom: 1px solid rgba(204,204,204,0.5);
-    background: #3f3f3f;
+    background: #222222;
   }
   .navbar-header {
-    background: #3f3f3f;
+    background: #222222;
   }
   .navbar-toggle {
     background-color: #6d6d6c;
   }
+  #carousel-example-generic {
+    height: 350px;
+  }
+  #carousel-example-generic img {
+    margin-top: 30px;
+  }
   .carousel-caption {
-    margin-bottom: 33%;
+    margin-bottom: 37%;
     position: absolute;
   }
   .navbar-form {
