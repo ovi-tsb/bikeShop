@@ -35,13 +35,16 @@
     <% end %>
     </div>
     </div>
-    <hr>
+   
     <%= render partial: "new_comment" %>
     <hr>
     <h4>Latest customers reviews :</h4>
     <%= render partial: "comments" %>
+      
+
+    <%= will_paginate @comments, inner_window: 1 %>
+      
     
-    <%= will_paginate @comments %>
     <br>
     <% if current_user && current_user.admin? %>
       <%= link_to 'Edit', edit_product_path(@product) , class: "btn btn-default" %>

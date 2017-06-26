@@ -80,47 +80,41 @@
           <% end %>
 
 
-              <div class="cover-text">
-                <h2>Welcome to Bike Shop </h2>
-                <p>The best services in town. </p>
-              </div>
+          <div class="cover-text">
+            <h2>Welcome to Bike Shop </h2>
+            <p>The best services in town. </p>
+          </div>
         </div>
         <article>
 
           <!--  modal  -->
-        <!-- Search Modal -->
-        <div id="modalSearch" class="modal fade" role="dialog">
-           <div class="modal-dialog modal-sm">
+          <!-- Search Modal -->
+          <div id="modalSearch" class="modal fade" role="dialog">
+             <div class="modal-dialog modal-sm">
 
-               <!-- Modal content-->
-               <div class="modal-content">
-                   <div class="modal-header">
-                       <button type="button" class="close" data-dismiss="modal">&times;</button>
-                       <h4 class="modal-title">Search</h4>
-                   </div>
-                   <div class="modal-body">
-                       <!-- Add the modal body here -->
-                           <%= form_tag("/products", method: "get", class: 'input-group') do %>
-                           <!--<%= label_tag(:q, "Search for:") %>-->
-                           <%= text_field_tag(:q ,"" , placeholder: "  Search .. ")%>
-                           <%= submit_tag("Search", class: "btn btn-default") %>
-                         <% end %>
-                   </div>
-                   
-               </div>
+                 <!-- Modal content-->
+                 <div class="modal-content">
+                     <div class="modal-header">
+                         <button type="button" class="close" data-dismiss="modal">&times;</button>
+                         <h4 class="modal-title">Search</h4>
+                     </div>
+                     <div class="modal-body">
+                         <!-- Add the modal body here -->
+                             <%= form_tag("/products", method: "get", class: 'input-group') do %>
+                             <!--<%= label_tag(:q, "Search for:") %>-->
+                             <%= text_field_tag(:q ,"" , placeholder: "  Search .. ")%>
+                             <%= submit_tag("Search", class: "btn btn-default") %>
+                           <% end %>
+                     </div>
+                     
+                 </div>
 
-           </div>
-        </div>
+             </div>
+          </div>
           <%= yield %>
         </article>
         <footer class="footer">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-9 col-sm-8 col-xs-5">
-                <p>&copy; Bike Shop 2017 </p>
-              </div>
-            </div> 
-          </div>
+          <p>&copy; Bike Shop 2017 </p>
         </footer> 
   </body>
 </html>
