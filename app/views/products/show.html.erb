@@ -5,6 +5,12 @@
     <div class="col-sm-9 col-md-9">
       <%= link_to 'Back to products', products_path, class: "btn btn-default" %>
       <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: @product.image_url) %>
+      <h6 class="views-count">  
+        Views:
+        <span class="badge">
+          <%= @product.views %>
+        </span>
+      </h6>  
     
     </div>
     <div class="col-sm-3 col-md-3 description">

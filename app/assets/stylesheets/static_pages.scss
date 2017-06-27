@@ -226,7 +226,10 @@ h1 {
 .comment-body p::first-letter{
   text-transform:capitalize;
 }
-
+.views-count {
+  margin: 0 auto;
+  width: 20%;
+}
 @media (min-width: 550px) and (max-width: 770px) {
   .navbar-inverse  {
     background: transparent;
@@ -268,7 +271,10 @@ h1 {
     border-top:1px solid grey;
     border-left: none;
   }
-  
+  .views-count {
+    margin: 10px auto;
+    width: 22%;
+  }
 }
 @media (max-width: 550px) {
   .cover-text h2 {
@@ -359,9 +365,9 @@ h1 {
     vertical-align: middle;
     margin-top: 10px;
   }
-  .pagination > .previous_page ,
-  .pagination > .next_page {
-    
+  .views-count {
+    margin: 10px auto;
+    width: 22%;
   }
 }
 

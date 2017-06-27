@@ -41,6 +41,7 @@ gem "brakeman", :require => false
 gem 'dalli'
 gem 'gmaps4rails'
 gem 'geocoder'
+gem 'redis-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
