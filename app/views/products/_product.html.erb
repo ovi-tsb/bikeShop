@@ -7,9 +7,7 @@
       </h3>
       <hr>
       <%= link_to image_tag(product.image_url, class: "img-responsive"),product unless product.image_url.blank? %>
-      <p>
-        <%= product.description %>
-      </p>
+      
       <p>
         Id: #<%= product.id %>
       </p>
@@ -23,6 +21,12 @@
       -->
       <p>
         $ <%= product.price %>
+      </p>
+      <h4>
+        Details :
+      </h4>
+      <p>
+        <%= truncate(product.description, :length => 20) %>
       </p>
       <%end%>
 
