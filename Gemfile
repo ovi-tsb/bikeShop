@@ -42,6 +42,7 @@ gem 'dalli'
 gem 'gmaps4rails'
 gem 'geocoder'
 gem 'redis-rails'
+gem 'newrelic_rpm'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
