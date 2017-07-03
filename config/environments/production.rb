@@ -97,6 +97,10 @@ Rails.application.configure do
                       }
   
 
+  config.web_socket_server_url = "wss://bike-shop-toronto.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://bike-shop-toronto.herokuapp.com', 'http://bike-shop-toronto.herokuapp.com']                   
+
+
 end
 
 

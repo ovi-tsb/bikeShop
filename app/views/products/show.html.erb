@@ -41,10 +41,12 @@
     <% end %>
     </div>
     </div>
-   
+    
     <%= render partial: "new_comment" %>
     <hr>
+
     <h4>Latest customers reviews :</h4>
+    <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
     <%= render partial: "comments" %>
       
 
