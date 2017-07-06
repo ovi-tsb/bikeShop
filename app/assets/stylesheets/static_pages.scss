@@ -17,6 +17,9 @@ h1 {
   font-size: 2.3em;
   margin: 70px 0 0 0;
 }
+p {
+   text-align: justify;
+}
 .footer {
   background-color: #333333;
   color : #fff;
@@ -149,7 +152,7 @@ h1 {
   border : 3px solid #919191;
 }
 .product p {
-  text-align: center;
+  text-align: justify;
   font-size: 1.3em;
   color: #5e5e5e; 
 }
@@ -275,6 +278,18 @@ h1 {
     margin: 10px auto;
     width: 22%;
   }
+  .input-group {
+    margin: 0 auto;
+  }
+  .navbar-header {
+    background: #222222;
+  }
+  .navbar-toggle {
+    background-color: #6d6d6c;
+  }
+  .navbar-collapse ul li {
+    background: #222222;
+  }
 }
 @media (max-width: 550px) {
   .cover-text h2 {
@@ -368,6 +383,9 @@ h1 {
   .views-count {
     margin: 10px auto;
     width: 22%;
+  }
+  .input-group {
+    margin: 0 auto;
   }
 }
 

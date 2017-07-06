@@ -23,3 +23,11 @@ $(document).on('turbolinks:load', function(){
      // });
     //$(".img-zoom").elevateZoom({tint:true, tintColour:'#F90', tintOpacity:0.5});// if you want some bg effects
 });
+
+
+
+
+
+
+
+
