@@ -301,7 +301,10 @@ p {
 @media (max-width: 550px) {
   .cover-text h2 {
     font-size: 1.4em;
-    margin: 40% auto;
+    margin: 30% auto;
+  }
+  h4 {
+    font-size: 1.2em;
   }
   .cover-text p {
     margin-top: -80px;
@@ -311,6 +314,7 @@ p {
   .cover{
     margin-top: -20px;
     padding:0;
+    height: 300px;
   }
   .about h2 {
     font-size: 1.1em;
