@@ -7,19 +7,18 @@
     <% end %>
   </ol>
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <% @products.each do |product| %>
-      <div class="item<%= " active" if product == @products.first %>">
-        <%= image_tag(product.image_url) %>
-        <div class="carousel-caption">
-          <%= product.name %>
-          Id : # <%= product.id %>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <% @products.each do |product| %>
+        <div class="item<%= " active" if product == @products.first %>">
+          <%= image_tag(product.image_url, class: "img-responsive") %>
+          <div class="carousel-caption prod-name">
+            <%= product.name %>
+            Id : # <%= product.id %>
+          </div> 
         </div>
-      </div>
-    <% end %>
-  
-</div>
+      <% end %>
+    </div>
 
   <!-- Controls -->
   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -34,32 +33,51 @@
 <div class="banner container-fluid">
   <h2>Latest Products</h2>
 </div>
+
 <article class="container">
 
-<article class="container category">
-  <div class="new-bike col-md-4 col-sm-4 col-xs-12" >
-    <h4>New Bikes</h4>
-    <a href=""><%= image_tag("bicycle-01.jpg", class: "img-responsive") %></a>
+  <div class="container category">
+    <div class="new-bike col-md-4 col-sm-4 col-xs-12" >
+      <h4>New Bikes</h4>
+      <a href=""><%= image_tag("bicycle-01.jpg", class: "img-responsive") %></a>
+     </div>
+    <div class="used-bike col-md-4 col-sm-4 col-xs-12" >
+      <h4>Used Bikes</h4>
+      <a href=""><%= image_tag("bicycle-02.jpg", class: "img-responsive") %></a>
+    </div>
+    <div class="used-bike col-md-4 col-sm-4 col-xs-12" >
+      <h4>Modified Bikes</h4>
+      <a href=""><%= image_tag("zps.jpg", class: "img-responsive") %></a>
+    </div>
   </div>
-  <div class="used-bike col-md-4 col-sm-4 col-xs-12" >
-    <h4>Used Bikes</h4>
-    <a href=""><%= image_tag("bicycle-02.jpg", class: "img-responsive") %></a>
+  
+  <div class="container product">
+    <p>
+      Bike Shop is all about passion! We love to ride our bikes as much as our customers do and we hope it shows when you stop by.    We’re in the business of not just selling you your favourite bike, but empowering and inspiring you to use it as often as you can.
+    </p>
+    <p>
+      Not only are we passionate about our cycling, we also strive to go above and beyond the service you would expect from a local,    family-owned business. Through a wide array of events and community outreach we hope to stoke your passion for cycling!
+    </p>
   </div>
-  <div class="used-bike col-md-4 col-sm-4 col-xs-12" >
-    <h4>Modified Bikes</h4>
-    <a href=""><%= image_tag("zps.jpg", class: "img-responsive") %></a>
-  </div>
-</article>
 
-<article class="container product">
-  <p>Bike Shop is all about passion! We love to ride our bikes as much as our customers do and we hope it shows when you stop by. We’re in the business of not just selling you your favourite bike, but empowering and inspiring you to use it as often as you can.</p>
-  <p>Not only are we passionate about our cycling, we also strive to go above and beyond the service you would expect from a local, family-owned business. Through a wide array of events and community outreach we hope to stoke your passion for cycling!</p>
-</article>
-<h2>Featured Product:</h2>
-<hr>
-<p>Bike Shop location was opened in 2017 by Kate Rowels, a consistent and well-loved customer at the Toronto location. Sharing the same dedication to a quality service center and an enjoyable sales experience, the Bike Shop location quickly became a successful shop in it’s own right.</p><br>
-<%= image_tag("bicycle-03.jpg", class: "img-responsive") %>
-<p>Our focus on informative and approachable customer service is simple but has proven to be a recipe for success and continued growth. We are always excited to help you find the perfect machine for your passion, and our mechanics are there to help you care for it as you enjoy it over the years.</p><br>
-<p>With strong ties to the community, a wide variety of bikes for all riders, and the top-notch service expected from our Bike Shop location has enthusiastically supported cyclists in the Toronto area for over 1 year!</p><br>
+  <h2>
+    Featured Product:
+  </h2>
+  <hr>
+  
+  <p>
+    Bike Shop location was opened in 2017 by Kate Rowels, a consistent and well-loved customer at the Toronto location. Sharing the  same dedication to a quality service center and an enjoyable sales experience, the Bike Shop location quickly became a successful  shop in it’s own right.
+  </p>
+  <br>
+  <%= image_tag("bicycle-03.jpg", class: "img-responsive") %>
+  <br>
+  <p>
+    Our focus on informative and approachable customer service is simple but has proven to be a recipe for success and continued   growth. We are always excited to help you find the perfect machine for your passion, and our mechanics are there to help you care for   it as you enjoy it over the years.
+  </p>
+  <br>
+  <p>
+    With strong ties to the community, a wide variety of bikes for all riders, and the top-notch service expected from our Bike Shop   location has enthusiastically supported cyclists in the Toronto area for over 1 year!
+  </p>
+  <br>
 
 </article>

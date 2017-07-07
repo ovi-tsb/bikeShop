@@ -7,7 +7,6 @@
 } 
 html, body {
   margin: 0;
-  
 }
 h1 {
   color : #fff;
@@ -18,7 +17,7 @@ h1 {
   margin: 70px 0 0 0;
 }
 p {
-   text-align: justify;
+  text-align: justify;
 }
 .footer {
   background-color: #333333;
@@ -198,7 +197,7 @@ p {
 .thank_you {
   color: green;
   margin-top: 20px;
-  min-height: 350px;
+  min-height: 450px;
 }
 .user-style {
   padding:40px;
@@ -227,11 +226,18 @@ p {
   border-left:1px solid grey;
 }
 .comment-body p::first-letter{
-  text-transform:capitalize;
+  text-transform: capitalize;
 }
 .views-count {
   margin: 0 auto;
   width: 20%;
+}
+.badge {
+  background-color: #0E92DF;
+}
+.prod-name {
+  text-transform: capitalize;
+  color: #790003;
 }
 @media (min-width: 550px) and (max-width: 770px) {
   .navbar-inverse  {
@@ -298,6 +304,8 @@ p {
   }
   .cover-text p {
     margin-top: -80px;
+    padding: 0 16px;
+    text-align: center;
   }
   .cover{
     margin-top: -20px;
@@ -334,17 +342,12 @@ p {
     background-color: #6d6d6c;
   }
   #carousel-example-generic {
-    height: 350px;
+    padding-top: 20px;
   }
   #carousel-example-generic img {
-    margin-top: 30px;
-  }
-  .carousel-caption {
-    margin-top: 30px;
-    position: absolute;
-  }
-  .carousel-inner {
-    padding-top: 50px;
+    width: auto;
+    height: 225px;
+    max-height: 225px;
   }
   .navbar-form {
     line-height: 24px;
@@ -382,7 +385,7 @@ p {
   }
   .views-count {
     margin: 10px auto;
-    width: 22%;
+    width: 32%;
   }
   .input-group {
     margin: 0 auto;
