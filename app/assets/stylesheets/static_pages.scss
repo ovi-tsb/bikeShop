@@ -257,6 +257,17 @@ p {
   color: #790003;
   font-size: 1.3em;
 }
+.prod-name a {
+ text-decoration: none;
+ color: #790003;
+}
+.prod-name a:hover {
+  background:none;
+  color: #009dff;
+}
+.price {
+  color: #ad0101;
+}
 .min-height {
   min-height: 420px;
   margin: 0 auto;
@@ -268,12 +279,17 @@ p {
   font-size: 0.8em;
 }
 .form-class {
- padding:15%;
+ padding:10%;
  border: 0px solid red;
 }
 .form-class input {
-  width: 80%;
+  width: 100%;
   float: right;
+}
+.form-class textarea {
+  width: 100%;
+  float: right;
+  height: 80px;
 }
 .form-class .btn-primary  {
   float: right;

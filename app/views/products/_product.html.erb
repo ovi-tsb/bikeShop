@@ -3,7 +3,7 @@
   <div class="one-prod">
     <% cache product do %> 
       <h3 class="prod-name">
-        <%= product.name %>
+        <%= link_to product.name , product %>
       </h3>
       <hr>
       <%= link_to image_tag(product.image_url, class: "img-responsive"),product unless product.image_url.blank? %>
@@ -19,8 +19,8 @@
         <%= product.created_at %>
       </p>
       -->
-      <p>
-        $ <%= product.price %>
+      <p class="price">
+        <strong>Price: </strong> <%= product.price %>
       </p>
       <h4>
         Details :
