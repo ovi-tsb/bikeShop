@@ -6,5 +6,7 @@
 <%= link_to 'Show', @user , class: "btn btn-default"%>
 <% if current_user && current_user.admin? %>
   <%= link_to 'Back', users_path , class: "btn btn-default"%>
+  <% else %>
+  <%= link_to 'Back', @user , class: "btn btn-default"%>
 <%end%>
 </article>

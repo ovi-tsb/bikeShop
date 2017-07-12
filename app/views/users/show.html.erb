@@ -1,34 +1,38 @@
 <article class="container user-style">
+  <h2>Your profile</h2>
+  <p id="notice"><%= notice %></p>
 
-<p id="notice"><%= notice %></p>
+  <p>
+    <strong>Email:</strong>
+    <span class="edit-user">
+      <%= @user.email %>
+    </span>  
+  </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <span class="capitalize-name edit-user"> 
+      <%= @user.first_name %> 
+    </span>
+  </p>
 
-<p>
-  <strong>Name:</strong>
-  <span class="capitalize-name"> 
-    <%= @user.first_name %> 
-  </span>
-</p>
-
-<p>
-  <strong>Last Name:</strong>
-  <span class="capitalize-name">
-    <%= @user.last_name %>
-  </span>
-</p>
-
-<p>
-  <strong>User Id:</strong>
-  <%= @user.id %>
-</p>
-<br><br>
-
-<%= link_to 'Edit', edit_user_path(@user) , class: "btn btn-default"%>
-<% if current_user && current_user.admin? %>
-  <%= link_to 'Back', users_path , class: "btn btn-default"%>
-<%end%>
+  <p>
+    <strong>Last Name:</strong>
+    <span class="capitalize-name edit-user">
+      <%= @user.last_name %>
+    </span>
+  </p>
+  
+  <p>
+    <strong>User Id:</strong>
+    <span class="edit-user">
+      <%= @user.id %>
+    </span>
+  </p>
+  <br><br>
+  
+  <%= link_to 'Edit', edit_user_path(@user) , class: "btn   btn-default"%>
+  <% if current_user && current_user.admin? %>
+    <%= link_to 'Back', users_path , class: "btn btn-default"%>
+  <%end%>
 </article>

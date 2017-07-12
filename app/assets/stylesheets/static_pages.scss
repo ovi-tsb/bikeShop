@@ -1,3 +1,4 @@
+
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
@@ -135,6 +136,9 @@ p {
   margin-top: 30%;
   text-align: center;
 }
+.cover-text p {
+  text-align: center;
+}
 .banner {
   background-color: #0b5991;
   height: 80px;
@@ -201,9 +205,18 @@ p {
 }
 .user-style {
   padding:40px;
-  height: 400px;
   margin: 20px auto;
-  max-width: 500px;
+  max-width: 400px;
+  border: 1px solid #d6d6d6;
+  background-color: #e2fcff;
+}
+.edit-user {
+  float: right;
+}
+.user-style p {
+  border-bottom: 1px solid #d6d6d6;
+  margin: 15px 0 20px 0;
+  padding-bottom: 15px;
 }
 .user-style i {
  color: #3097ff;
@@ -214,10 +227,14 @@ p {
 .user-login {
   color: #71d2d6;
   margin-top: 0px;
+  position: fixed;
 }
 .alert-info{
   color: #000;
   margin-top: 60px;
+  position: fixed;
+  left: 10%; 
+  right: 10%;
 }
 .capitalize-name {
   text-transform: capitalize;
@@ -240,6 +257,31 @@ p {
   color: #790003;
   font-size: 1.3em;
 }
+.min-height {
+  min-height: 420px;
+  margin: 0 auto;
+}
+.min-height em {
+  font-size: 0.9em;
+}
+.min-height .btn-primary {
+  font-size: 0.8em;
+}
+.form-class {
+ padding:15%;
+ border: 0px solid red;
+}
+.form-class input {
+  width: 80%;
+  float: right;
+}
+.form-class .btn-primary  {
+  float: right;
+}
+.actions .btn-default {
+  width:20%;
+}
+
 @media (min-width: 550px) and (max-width: 770px) {
   .navbar-inverse  {
     background: transparent;
@@ -399,9 +441,33 @@ p {
   .input-group {
     margin: 0 auto;
   }
+  .form-class {
+    padding: 5%;
+    margin: 50px 0;
+  }
+  .form-class input {
+    width: 100%;
+  }
+  .form-class label {
+    font-size: 0.8em;
+  }
+  .form-class em {
+    font-size: 0.8em;
+  }
+  .min-height {
+    min-height: 550px;
+  }
+  .actions .btn-default {
+    width:30%;
+  }
+  .form-class .btn-primary  {
+    font-size: 0.6em;
+    width: 50%;
+  }
+  .form-class input::placeholder {
+    font-size: 0.8em;
+  }
 }
-
-
 
 
 

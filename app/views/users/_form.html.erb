@@ -1,4 +1,4 @@
-<%= form_for(user) do |f| %>
+<%= form_for(user, html: { class: "form-class" }) do |f| %>
   <% if user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -10,20 +10,31 @@
       </ul>
     </div>
   <% end %>
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
-  </div>
-  <div class="field">
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
-  </div>
+  <div class="row">
+      <div class="field col-md-4 col-sm-4 col-xs-5">
+        <%= f.label :email %>
+      </div>  
+      <div class="field col-md-8 col-sm-8 col-xs-7">
+        <%= f.email_field :email, autofocus: true, :required => true, placeholder: "Email" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="field col-md-4 col-sm-4 col-xs-5">
+        <%= f.label :first_name %>
+      </div>  
+      <div class="field col-md-8 col-sm-8 col-xs-7">
+        <%= f.text_field :first_name, :required => true, placeholder: "First Name" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="field col-md-4 col-sm-4 col-xs-5">
+        <%= f.label :last_name %>
+      </div>  
+      <div class="field col-md-8 col-sm-8 col-xs-7">
+        <%= f.text_field :last_name, :required => true, placeholder: "Last name" %>
+      </div>
+    </div>
   <div class="actions">
     <%= f.submit class: "btn btn-default" %>
-  </div><hr>
+  </div>
 <% end %>
