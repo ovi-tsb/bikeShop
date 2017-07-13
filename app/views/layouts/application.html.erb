@@ -29,10 +29,10 @@
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
               <ul class="nav navbar-nav navbar-right">
-                <li class=<%= active_class(root_path) %> ><%= link_to 'Home', root_path %></li>
-                <li class=<%= active_class(static_pages_about_path) %> ><%= link_to 'About', static_pages_about_path %></li>
-                <li class=<%= active_class(products_path) %> ><%= link_to 'Products', products_path %></li>
-                <li class=<%= active_class(static_pages_contact_path) %> ><%= link_to 'Contact', static_pages_contact_path %></li>
+                <li class="<%= active_class(root_path) %>" ><%= link_to 'Home', root_path %></li>
+                <li class="<%= active_class(static_pages_about_path) %>" ><%= link_to 'About', static_pages_about_path %></li>
+                <li class="<%= active_class(products_path) %>" ><%= link_to 'Products', products_path %></li>
+                <li class="<%= active_class(static_pages_contact_path) %>" ><%= link_to 'Contact', static_pages_contact_path %></li>
                 
                 <li>
                   <% if user_signed_in? %>
