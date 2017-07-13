@@ -6,7 +6,7 @@
         <%= link_to product.name , product %>
       </h3>
       <hr>
-      <%= link_to image_tag(product.image_url, class: "img-responsive"),product unless product.image_url.blank? %>
+      <%= link_to image_tag(product.image_url, alt: "image", class: "img-responsive"),product unless product.image_url.blank? %>
       
       <p>
         Id: #<%= product.id %>
