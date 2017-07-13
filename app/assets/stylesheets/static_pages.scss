@@ -231,8 +231,15 @@ p {
 }
 .alert-info{
   color: #000;
-  margin-top: 60px;
   
+}
+#notice,
+#alert {
+  color: #34c943;
+  margin-top: 60px;
+  position: fixed;
+  left: 10%; 
+  right: 10%;
 }
 .capitalize-name {
   text-transform: capitalize;
