@@ -1,45 +1,44 @@
 <article class="container">
   <div class="show"> 
-    <p id="notice"><%= notice %></p>
     <div class="row" data-product-id="<%= @product.id %>">
-    <div class="col-sm-9 col-md-9">
-      <%= link_to 'Back to products', products_path, class: "btn btn-default" %>
-      <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: @product.image_url) %>
-      <h6 class="views-count">  
-        Views:
-        <span class="badge">
-          <%= @product.views %>
-        </span>
-      </h6>  
-    
-    </div>
-    <div class="col-sm-3 col-md-3 description">
-      <% cache @product do %>  
-        <p>
-          <strong>Name:</strong>
-          <%= @product.name %>
+      <div class="col-sm-9 col-md-9">
+        <%= link_to 'Back to products', products_path, class: " btn btn-default" %>
+        <%= image_tag(@product.image_url, class: "img-responsive  img-zoom", data_zoom_image: @product.image_url) %>
+        <h6 class="views-count">  
+          Views:
+          <span class="badge">
+            <%= @product.views %>
+          </span>
+        </h6>  
+      
+      </div>
+      <div class="col-sm-3 col-md-3 description">
+        <% cache @product do %>  
+          <p>
+            <strong>Name:</strong>
+            <%= @product.name %>
+          </p>
+          
+          <p>
+           <strong>Description:</strong>
+            <%= @product.description %>
+          </p>
+          
+          <p>
+            <strong>Colour:</strong>
+            <%= @product.colour %>
+          </p>
+          <p class="price">
+            <strong>Price:</strong>
+            <%= @product.price %>
+          </p>
+        <% end %>
+        <p>Average Rating: <div class="rated" id="average-rating"  data-score="<%= @product.average_rating %>"></div> 
         </p>
-        
-        <p>
-         <strong>Description:</strong>
-          <%= @product.description %>
-        </p>
-        
-        <p>
-          <strong>Colour:</strong>
-          <%= @product.colour %>
-        </p>
-        <p class="price">
-          <strong>Price:</strong>
-          <%= @product.price %>
-        </p>
-      <% end %>
-    <p>Average Rating: <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div> 
-    </p>
-    <%= form_tag "/payments/create" do %>
-      <%= render partial: "shared/stripe_checkout_button" %>
-    <% end %>
-    </div>
+        <%= form_tag "/payments/create" do %>
+        <%= render partial: "shared/stripe_checkout_button" %>
+        <% end %>
+      </div>
     </div>
     
     <%= render partial: "new_comment" %>

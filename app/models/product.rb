@@ -9,11 +9,12 @@ class Product < ApplicationRecord
   validates :image_url, presence: true
 
   def self.search(search_term)
-    if Rails.env.development?
-          Product.where("name LIKE ?", "%#{search_term}%")
-        else
-          Product.where("name ilike ?", "%#{search_term}%")
-        end
+    #if Rails.env.development?
+    #      Product.where("name LIKE ?", "%#{search_term}%")
+     #   else
+     #     Product.where("name ilike ?", "%#{search_term}%")
+     #   end
+     Product.where("lower(name) LIKE lower(?)", "%#{search_term}%")
   end
 
   def highest_rating_comment

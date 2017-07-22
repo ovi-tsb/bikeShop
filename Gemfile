@@ -53,7 +53,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', '~> 3.5'
   gem "factory_girl_rails", "~> 4.0"
-  
+  gem 'simplecov', :require => false, :group => :test
 end
 group :production do
   gem 'pg'

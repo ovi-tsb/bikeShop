@@ -8,6 +8,5 @@ FactoryGirl.define do
     price "200.99"
     colour "red"
     description "Nice bike"
-    id 
   end
 end
